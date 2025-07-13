@@ -19,17 +19,6 @@ body {
   position: relative;
 }
 
-/* Moldura verde escura nas laterais */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
-  border-left: 12px solid #556B45;
-  border-right: 12px solid #556B45;
-  pointer-events: none;
-  z-index: 0;
-}
 
 /* Sobreposição branca translúcida com blur */
 body::before {
