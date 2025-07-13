@@ -35,11 +35,11 @@ body::before {
 .form-container {
   position: relative;
   z-index: 1;
-  max-width: 420px;
+  max-width: 360px;
   width: 100%;
   background-color: #FFF9F3;
   border-radius: 16px;
-  padding: 40px 24px;
+  padding: 32px 20px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   border: 1px solid #EEE6D5;
