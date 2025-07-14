@@ -11,29 +11,42 @@
 </head>
 <body>
 
-  <section class="form-container">
-    <img src="logo.png" alt="Logo Oficina das Suculentas" class="logo" />
+  <section class="form-container" style="font-family: 'Roboto', sans-serif; padding: 24px; background-color: #fff; border-radius: 12px; max-width: 420px; margin: 0 auto; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+    <img src="logo.png" alt="Logo Oficina das Suculentas" class="logo" style="width: 100px; display: block; margin: 0 auto 20px;" />
 
-    <h1>
-      🎉 Aniversário de 5 anos da Oficina das Suculentas 🎉<br />
-      <span>🌟 Lançamento oficial da Coleção Comemorativa 5 Anos 🌟</span>
+    <h1 style="text-align: center; font-size: 1.4rem; line-height: 1.5;">
+      🎉 <strong>Aniversário de 5 anos da</strong><br />
+      <strong>Oficina das Suculentas</strong> 🎉<br />
+      <span style="display: inline-block; margin-top: 8px; font-size: 1.2rem; color: #556B45;">
+        🌟 <strong>Lançamento oficial da Coleção Comemorativa 5 Anos</strong> 🌟
+      </span>
     </h1>
 
-    <p>
-      ATENÇÃO, COLECIONADORES!
-A maior celebração da nossa história está chegando — e você está convidado para viver esse momento único!
-
-🌵 De 17 a 19 de julho, abrimos nossas estufas para comemorar 5 anos da Oficina das Suculentas com o lançamento da nossa Coleção Comemorativa, criada especialmente para quem ama espécies raras, diferenciadas e de alto padrão.
+    <p style="margin-top: 16px; font-size: 0.95rem; line-height: 1.6; color: #333;">
+      <strong style="color: #8e023d;">ATENÇÃO, COLECIONADORES!</strong><br /><br />
+      A maior celebração da nossa história está chegando — e <strong>você está convidado</strong> para viver esse momento único! 🌵
     </p>
 
-    <form id="vipForm" onsubmit="enviarFormulario(event)">
-      <input type="text" id="nome" placeholder="Nome completo" required />
-      <input type="email" id="email" placeholder="E-mail" required />
-      <input type="tel" id="telefone" placeholder="Telefone com DDD" required />
-      <button type="submit">Entrar no Grupo de Aniversário</button>
+    <p style="font-size: 0.95rem; line-height: 1.6; color: #333; margin-top: 12px;">
+      📅 <strong>De 17 a 19 de julho</strong>, abriremos nossas estufas para comemorar os 5 anos da <strong>Oficina das Suculentas</strong> com o lançamento da nossa <strong>Coleção Comemorativa</strong>, criada especialmente para quem ama:
+    </p>
+
+    <ul style="font-size: 0.95rem; line-height: 1.6; margin-top: 12px; padding-left: 20px; color: #2F3320;">
+      <li>🌿 Espécies raras</li>
+      <li>🌸 Variedades diferenciadas</li>
+      <li>🏆 Alto padrão e exclusividade</li>
+    </ul>
+
+    <form id="vipForm" onsubmit="enviarFormulario(event)" style="margin-top: 24px;">
+      <input type="text" id="nome" placeholder="Nome completo" required style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 8px;" />
+      <input type="email" id="email" placeholder="E-mail" required style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 8px;" />
+      <input type="tel" id="telefone" placeholder="Telefone com DDD" required style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px;" />
+      <button type="submit" style="width: 100%; padding: 14px; background-color: #B68D3C; color: white; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">
+        Entrar no Grupo de Aniversário
+      </button>
     </form>
 
-    <footer>
+    <footer style="margin-top: 24px; text-align: center; font-size: 0.8rem; color: #999;">
       <p>© 2025 Oficina das Suculentas. Todos os direitos reservados.</p>
     </footer>
   </section>
