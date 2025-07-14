@@ -35,7 +35,7 @@ body::before {
 .form-container {
   position: relative;
   z-index: 1;
-  max-width: 420px;
+  max-width: 400px;
   width: 100%;
   background-color: #FFF9F3;
   border-radius: 16px;
