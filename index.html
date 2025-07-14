@@ -68,10 +68,21 @@
     </p>
 
     <form id="vipForm" onsubmit="enviarFormulario(event)">
-      <input type="text" id="nome" placeholder="Nome completo" required />
-      <input type="tel" id="telefone" placeholder="Telefone com DDD" required />
-      <button type="submit" id="botaoEnviar">Entrar no Grupo de Aniversário</button>
-    </form>
+  <input type="text" id="nome" placeholder="Nome completo" required />
+  <input type="tel" id="telefone" placeholder="Telefone com DDD" required />
+  <button type="submit" id="botaoEnviar">Cadastrar</button>
+</form>
+
+<div id="confirmacao" style="display:none; margin-top: 24px;">
+  <p><strong>Cadastro realizado com sucesso!</strong></p>
+  <a href="https://chat.whatsapp.com/JAjxTMlxNxL5yLfcSCZKMZ?mode=r_t"
+     target="_blank"
+     class="botao-whatsapp"
+     style="display:inline-block; padding:16px; background-color:#cf891f; color:#fff; font-weight:bold; font-size:17px; border-radius:10px; text-decoration:none;">
+    👉 Entrar no grupo do WhatsApp
+  </a>
+</div>
+
 
     <footer>
       <p>© 2025 Oficina das Suculentas. Todos os direitos reservados.</p>
@@ -79,20 +90,44 @@
   </section>
 
   <script>
-    function enviarFormulario(e) {
-      e.preventDefault();
+  function enviarFormulario(e) {
+    e.preventDefault();
 
-      const botao = document.getElementById("botaoEnviar");
-      botao.disabled = true;
-      botao.innerText = "Enviando...";
+    const botao = document.getElementById("botaoEnviar");
+    botao.disabled = true;
+    botao.innerText = "Enviando...";
 
-      const nome = document.getElementById("nome").value;
-      const telefone = document.getElementById("telefone").value;
+    const nome = document.getElementById("nome").value;
+    const telefone = document.getElementById("telefone").value;
 
-      const dados = {
-        nome: nome,
-        telefone: telefone
-      };
+    const dados = {
+      nome: nome,
+      telefone: telefone
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbztdIDnayLNMYKw7ScuyZNtiZTdX47bkmdv3UBdsYZHzWf1c4WY0Tt4NzTYtlK-_HLeMw/exec", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(dados)
+    })
+    .then(() => {
+      // Esconde o formulário
+      document.getElementById("vipForm").style.display = "none";
+      // Mostra a confirmação e botão do WhatsApp
+      document.getElementById("confirmacao").style.display = "block";
+    })
+    .catch((error) => {
+      alert("Erro ao enviar. Tente novamente.");
+      console.error(error);
+      botao.disabled = false;
+      botao.innerText = "Cadastrar";
+    });
+  }
+</script>
+
 
       fetch("https://script.google.com/macros/s/AKfycbztdIDnayLNMYKw7ScuyZNtiZTdX47bkmdv3UBdsYZHzWf1c4WY0Tt4NzTYtlK-_HLeMw/exec", {
         method: "POST",
