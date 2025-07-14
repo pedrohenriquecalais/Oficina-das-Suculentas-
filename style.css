@@ -156,6 +156,28 @@ footer {
   <span class="titulo-festa">🎉 Aniversário de 5 anos 🎉</span><br />
   <span class="nome-evento">Oficina das Suculentas</span>
 </h1>
+.titulo-festa {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.linha-titulo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2F3320;
+  margin-bottom: 4px;
+}
+
+.nome-evento {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2F3320;
+}
 
 }
 
