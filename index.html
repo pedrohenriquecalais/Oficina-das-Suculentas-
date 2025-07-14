@@ -70,7 +70,7 @@
     <form id="vipForm" onsubmit="enviarFormulario(event)">
       <input type="text" id="nome" placeholder="Nome completo" required />
       <input type="tel" id="telefone" placeholder="Telefone com DDD" required />
-      <button type="submit">Entrar no Grupo de Aniversário</button>
+      <button type="submit" id="botaoEnviar">Entrar no Grupo de Aniversário</button>
     </form>
 
     <footer>
@@ -81,6 +81,10 @@
   <script>
     function enviarFormulario(e) {
       e.preventDefault();
+
+      const botao = document.getElementById("botaoEnviar");
+      botao.disabled = true;
+      botao.innerText = "Enviando...";
 
       const nome = document.getElementById("nome").value;
       const telefone = document.getElementById("telefone").value;
@@ -99,12 +103,13 @@
         body: JSON.stringify(dados)
       })
       .then(() => {
-  document.getElementById("botaoEnviar").disabled = true;
-  window.location.href = "https://chat.whatsapp.com/JAjxTMlxNxL5yLfcSCZKMZ?mode=r_t";
-})
+        window.location.href = "https://chat.whatsapp.com/JAjxTMlxNxL5yLfcSCZKMZ?mode=r_t";
+      })
       .catch((error) => {
         alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
         console.error("Erro ao enviar:", error);
+        botao.disabled = false;
+        botao.innerText = "Entrar no Grupo de Aniversário";
       });
     }
   </script>
