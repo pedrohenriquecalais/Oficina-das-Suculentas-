@@ -8,22 +8,52 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .titulo-festa {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2F3320;
+      text-align: center;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .linha-titulo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #2F3320;
+      margin: 0;
+    }
+
+    .linha-titulo span {
+      font-size: 20px;
+    }
+
+    .nome-evento {
+      display: block;
+      font-size: 24px;
+      font-weight: bold;
+      color: #2F3320;
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
 
   <section class="form-container">
     <img src="logo.png" alt="Logo Oficina das Suculentas" class="logo" />
 
-   <h1 class="titulo-festa">
-  <span class="linha-titulo">
-    🎉 <span>Aniversário de 5 anos</span> 🎉
-  </span>
-  <span class="nome-evento">Oficina das Suculentas</span>
-</h1>
-  
+    <div class="titulo-festa">
+      <span class="linha-titulo">🎉 <span>Aniversário de 5 anos</span> 🎉</span>
+      <span class="nome-evento">Oficina das Suculentas</span>
+    </div>
 
     <h2 class="subtitulo">
-      🌟 Lançamento oficial da Coleção Comemorativa  de 5 Anos 🌟
+      🌟 Lançamento oficial da Coleção Comemorativa de 5 Anos 🌟
     </h2>
 
     <p><strong style="color: #FF6600;">ATENÇÃO, COLECIONADORES!</strong></p>
@@ -49,39 +79,38 @@
     </footer>
   </section>
 
- <script>
-  function enviarFormulario(e) {
-    e.preventDefault();
+  <script>
+    function enviarFormulario(e) {
+      e.preventDefault();
 
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const telefone = document.getElementById("telefone").value;
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const telefone = document.getElementById("telefone").value;
 
-    const dados = {
-      nome: nome,
-      email: email,
-      telefone: telefone
-    };
+      const dados = {
+        nome: nome,
+        email: email,
+        telefone: telefone
+      };
 
-    fetch("https://script.google.com/macros/s/AKfycbztdIDnayLNMYKw7ScuyZNtiZTdX47bkmdv3UBdsYZHzWf1c4WY0Tt4NzTYtlK-_HLeMw/exec", {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(dados)
-    })
-    .then(() => {
-      alert("Cadastro realizado com sucesso! Agora você será redirecionado para o grupo de WhatsApp.");
-      window.location.href = "https://chat.whatsapp.com/JAjxTMlxNxL5yLfcSCZKMZ?mode=r_t";
-    })
-    .catch((error) => {
-      alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
-      console.error("Erro ao enviar:", error);
-    });
-  }
-</script>
-
+      fetch("https://script.google.com/macros/s/AKfycbztdIDnayLNMYKw7ScuyZNtiZTdX47bkmdv3UBdsYZHzWf1c4WY0Tt4NzTYtlK-_HLeMw/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dados)
+      })
+      .then(() => {
+        alert("Cadastro realizado com sucesso! Agora você será redirecionado para o grupo de WhatsApp.");
+        window.location.href = "https://chat.whatsapp.com/JAjxTMlxNxL5yLfcSCZKMZ?mode=r_t";
+      })
+      .catch((error) => {
+        alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
+        console.error("Erro ao enviar:", error);
+      });
+    }
+  </script>
 
 </body>
 </html>
