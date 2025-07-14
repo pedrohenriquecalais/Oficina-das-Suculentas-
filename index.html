@@ -46,12 +46,39 @@
     </footer>
   </section>
 
-  <script>
-    function enviarFormulario(e) {
-      e.preventDefault();
-      window.location.href = 'https://chat.whatsapp.com/JAjxTMlxNxL5yLfcSCZKMZ?mode=r_t';
-    }
-  </script>
+ <script>
+  function enviarFormulario(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const telefone = document.getElementById("telefone").value;
+
+    const dados = {
+      nome: nome,
+      email: email,
+      telefone: telefone
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbztdIDnayLNMYKw7ScuyZNtiZTdX47bkmdv3UBdsYZHzWf1c4WY0Tt4NzTYtlK-_HLeMw/exec", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(dados)
+    })
+    .then(() => {
+      alert("Cadastro realizado com sucesso! Agora você será redirecionado para o grupo de WhatsApp.");
+      window.location.href = "https://chat.whatsapp.com/JAjxTMlxNxL5yLfcSCZKMZ?mode=r_t";
+    })
+    .catch((error) => {
+      alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
+      console.error("Erro ao enviar:", error);
+    });
+  }
+</script>
+
 
 </body>
 </html>
