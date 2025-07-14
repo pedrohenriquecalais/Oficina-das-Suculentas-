@@ -157,19 +157,18 @@ footer {
   <span class="nome-evento">Oficina das Suculentas</span>
 </h1>
 .titulo-festa {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.linha-titulo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
   font-size: 20px;
   font-weight: bold;
   color: #2F3320;
-  margin-bottom: 4px;
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.titulo-festa span {
+  display: inline;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .nome-evento {
@@ -177,7 +176,9 @@ footer {
   font-size: 24px;
   font-weight: bold;
   color: #2F3320;
+  margin-top: 4px;
 }
+
 
 
 }
