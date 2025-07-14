@@ -69,7 +69,6 @@
 
     <form id="vipForm" onsubmit="enviarFormulario(event)">
       <input type="text" id="nome" placeholder="Nome completo" required />
-      <input type="email" id="email" placeholder="E-mail"  />
       <input type="tel" id="telefone" placeholder="Telefone com DDD" required />
       <button type="submit">Entrar no Grupo de Aniversário</button>
     </form>
@@ -84,12 +83,10 @@
       e.preventDefault();
 
       const nome = document.getElementById("nome").value;
-      const email = document.getElementById("email").value;
       const telefone = document.getElementById("telefone").value;
 
       const dados = {
         nome: nome,
-        email: email,
         telefone: telefone
       };
 
