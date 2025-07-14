@@ -102,8 +102,9 @@
         body: JSON.stringify(dados)
       })
       .then(() => {
-        window.location.href = "https://chat.whatsapp.com/JAjxTMlxNxL5yLfcSCZKMZ?mode=r_t";
-      })
+  document.getElementById("botaoEnviar").disabled = true;
+  window.location.href = "https://chat.whatsapp.com/JAjxTMlxNxL5yLfcSCZKMZ?mode=r_t";
+})
       .catch((error) => {
         alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
         console.error("Erro ao enviar:", error);
