@@ -81,9 +81,9 @@
         body: JSON.stringify(dados)
       })
       .then(() => {
-        document.getElementById("vipForm").style.display = "none";
-        document.getElementById("confirmacao").style.display = "block";
-      })
+       document.getElementById("vipForm").style.display = "none";
+  document.getElementById("confirmacao").style.display = "block";
+  window.location.href = "abrir.html";
       .catch((error) => {
         alert("Erro ao enviar. Tente novamente.");
         console.error(error);
