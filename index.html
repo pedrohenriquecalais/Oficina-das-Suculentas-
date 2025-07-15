@@ -49,37 +49,36 @@
   </section>
 
   <script>
-    function enviarFormulario(e) {
-      e.preventDefault();
+   function enviarFormulario(e) {
+  e.preventDefault();
 
-      const botao = document.getElementById("botaoEnviar");
-      botao.disabled = true;
-      botao.innerText = "Enviando...";
+  const botao = document.getElementById("botaoEnviar");
+  botao.disabled = true;
+  botao.innerText = "Enviando...";
 
-      const nome = document.getElementById("nome").value;
-      const telefone = document.getElementById("telefone").value;
+  const nome = document.getElementById("nome").value;
+  const telefone = document.getElementById("telefone").value;
 
-      const dados = { nome, telefone };
+  const dados = { nome, telefone };
 
-      fetch("https://script.google.com/macros/s/AKfycbztdIDnayLNMYKw7ScuyZNtiZTdX47bkmdv3UBdsYZHzWf1c4WY0Tt4NzTYtlK-_HLeMw/exec", {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(dados)
-      })
-      .then(() => {
-        document.getElementById("vipForm").style.display = "none";
-        document.getElementById("confirmacao").style.display = "block";
-      })
-      .catch((error) => {
-        alert("Erro ao enviar. Tente novamente.");
-        console.error(error);
-        botao.disabled = false;
-        botao.innerText = "Cadastrar";
-      });
-    }
+  fetch("https://script.google.com/macros/s/AKfycbztdIDnayLNMYKw7ScuyZNtiZTdX47bkmdv3UBdsYZHzWf1c4WY0Tt4NzTYtlK-_HLeMw/exec", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(dados)
+  })
+  .then(() => {
+    window.location.href = "abrir.html";
+  })
+  .catch((error) => {
+    alert("Erro ao enviar. Tente novamente.");
+    console.error(error);
+    botao.disabled = false;
+    botao.innerText = "Cadastrar";
+  });
+         }
   </script>
 </body>
 </html>
