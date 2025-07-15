@@ -10,13 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-
   <section class="form-container">
     <img src="logo.png" alt="Logo Oficina das Suculentas" class="logo" />
 
     <div class="titulo-festa">
-      <span class="linha-titulo">🎉 <span>Aniversário de 5 anos</span> 🎉</span>
-      <span class="nome-evento">Oficina das Suculentas</span>
+      <span class="linha-titulo">🎉 <span>Aniversário de 5 anos</span> 🎉
+      </span>
+      <span class="nome-evento">Oficina das Suculentas</span>a
     </div>
 
     <h2 class="subtitulo">
@@ -24,15 +24,8 @@
     </h2>
 
     <p><strong style="color: #FF6600;">ATENÇÃO, COLECIONADORES!</strong></p>
-
-    <p>
-      A maior celebração da nossa história está chegando — e <strong>você está convidado</strong> para viver esse momento único! 🌵
-    </p>
-
-    <p>
-      📅 <strong>De 17 a 19 de julho</strong>, abriremos nossas estufas para comemorar os 5 anos da
-      <strong>Oficina das Suculentas</strong> com o lançamento da nossa <strong>Coleção Comemorativa</strong>.
-    </p>
+    <p>A maior celebração da nossa história está chegando — e <strong>você está convidado</strong> para viver esse momento único! 🌵</p>
+    <p>🗕️ <strong>De 17 a 19 de julho</strong>, abriremos nossas estufas para comemorar os 5 anos da <strong>Oficina das Suculentas</strong> com o lançamento da nossa <strong>Coleção Comemorativa</strong>.</p>
 
     <form id="vipForm" onsubmit="enviarFormulario(event)">
       <input type="text" id="nome" placeholder="Nome completo" required />
@@ -42,13 +35,9 @@
 
     <div id="confirmacao" style="display:none; margin-top: 24px;">
       <p><strong>Cadastro realizado com sucesso!</strong></p>
-    <a href="abrir.html"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="botao-whatsapp">
-  👉 Entrar no grupo do WhatsApp
-</a>
-
+      <a href="abrir.html" target="_blank" rel="noopener noreferrer" class="botao-whatsapp">
+        👉 Entrar no grupo do WhatsApp
+      </a>
       <p style="font-size: 13px; margin-top: 12px; color: #666;">
         Se estiver usando o Instagram, toque nos 3 pontinhos e depois em <strong>"Abrir no navegador"</strong>.
       </p>
@@ -81,9 +70,9 @@
         body: JSON.stringify(dados)
       })
       .then(() => {
-       document.getElementById("vipForm").style.display = "none";
-  document.getElementById("confirmacao").style.display = "block";
-  window.location.href = "abrir.html";
+        document.getElementById("vipForm").style.display = "none";
+        document.getElementById("confirmacao").style.display = "block";
+      })
       .catch((error) => {
         alert("Erro ao enviar. Tente novamente.");
         console.error(error);
@@ -92,6 +81,5 @@
       });
     }
   </script>
-
 </body>
 </html>
