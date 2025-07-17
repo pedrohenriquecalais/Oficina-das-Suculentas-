@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oficina das Suculentas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fff;
+      font-family: 'Outfit', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px;
+      position: relative;
+    }
+
+    .fundo-svg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .form-container {
+      position: relative;
+      z-index: 2;
+      max-width: 380px;
+      width: 100%;
+      background-color: #FFF9F3;
+      border-radius: 24px;
+      padding: 56px 28px 60px;
+      box-shadow: 0 16px 32px rgba(167, 145, 106, 0.15);
+      text-align: center;
+      border: 1px solid #f0e2d2;
+      animation: pop-in 0.6s ease;
+    }
+
+    .logo {
+      max-width: 120px;
+      margin: 0 auto 32px;
+      display: block;
+    }
+
+    @keyframes pop-in {
+      from {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      font-family: 'Marcellus', serif;
+      font-size: 21px;
+      color: #3D3528;
+      margin-bottom: 10px;
+    }
+
+    .subtitulo {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px;
+      color: #D97D0D;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #4d463c;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .marcado {
+      background: #FFF3E0;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #E0D8CA;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      transition: transform 0.2s ease;
+    }
+
+    .input-group:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 0 2px #E8D6C3;
+    }
+
+    .input-group span {
+      font-size: 18px;
+      margin-right: 8px;
+    }
+
+    .input-group input {
+      border: none;
+      outline: none;
+      font-size: 15px;
+      width: 100%;
+      background: transparent;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #FF914D, #C76635);
+      color: #fff;
+      font-weight: 600;
+      font-size: 17px;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(255, 145, 77, 0.3);
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #A44A2E, #843B20);
+      transform: scale(1.05);
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #8f8072;
+      margin-top: 24px;
+    }
+
+    .feedback {
+      margin-top: 16px;
+      font-size: 14px;
+      background-color: #e6f9e7;
+      color: #2f552d;
+      padding: 10px;
+      border-radius: 8px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FUNDO SVG FIXO -->
+  <div class="fundo-svg">
+    <svg width="100%" height="100%" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <rect width="1440" height="900" fill="#9CAF61"/>
+      <path d="M0,500 C360,430 1080,580 1440,480 L1440,900 L0,900 Z" fill="#FFEFCF"/>
+      <path d="M0,300 C400,400 1040,200 1440,340 L1440,0 L0,0 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <div class="form-container">
+    <img src="logo-oficina.png" alt="Logo Oficina das Suculentas" class="logo" />
+
+    <h1>Moradores de Minas Gerais ATENÇÃO!</h1>
+    <div class="subtitulo">🌟 Promoção de Aniversário 🌟 Exclusiva </div>
+
+    <p>O aniversário da <strong>Oficina das Suculentas</strong> está imperdível — e você poderá aproveitar sem sair de casa!</p>
+    <p>Vamos liberar suculentas de coleção com uma super oportunidade de compra, e quem mora em MG ainda garante <span class="marcado">frete grátis</span>!</p>
+
+    <p>📲 Cadastre-se abaixo para garantir acesso antecipado.<br><strong>Não perca!</strong></p>
+
+    <form id="form">
+      <div class="input-group">
+        <span>🌿</span>
+        <input type="text" placeholder="Nome completo" required />
+      </div>
+      <div class="input-group">
+        <span>📞</span>
+        <input type="tel" placeholder="Telefone com DDD" required />
+      </div>
+      <button type="submit">Quero Participar!</button>
+      <div class="feedback" id="feedback">✅ Cadastro realizado com sucesso!</div>
+    </form>
+
+    <div class="footer">🔒 Seus dados estão protegidos. Não enviamos spam.</div>
+  </div>
+
+  <script>
+    document.getElementById("form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const feedback = document.getElementById("feedback");
+      feedback.style.display = "block";
+      setTimeout(() => {
+        window.location.href = "https://chat.whatsapp.com/BU93cZp5QtjLxI8PPaqhwa?mode=r_t";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
