@@ -12,25 +12,38 @@ body {
 
 /* Header */
 .topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 20px;
-    position: absolute;
     width: 100%;
+    position: absolute;
     top: 0;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
 }
 
-.logo {
-    width: 30px;
+.logo-completa {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaço entre texto e logo */
 }
+
+.texto-logo {
+    font-family: 'serif';
+    font-weight: bold;
+    font-size: 1.0rem; /* Ajuste conforme o visual desejado */
+    color: #2f3e2f; /* Cor parecida com a original */
+}
+
+.logo-simbolo {
+    width: 40px; /* Ajuste o tamanho da logo */
+}
+
 
 .menu-icon {
-    font-size: 28px;
-    color: #fff;
-    cursor: pointer;
+    display: none;
 }
+
 
 /* Hero Section */
 .hero {
@@ -43,6 +56,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 80px 20px;
+    
 }
 
 .hero::before {
@@ -59,6 +73,7 @@ body {
     text-align: center;
     z-index: 2;
     max-width: 400px;
+    margin-top: 100px;
 }
 
 .hero-content h1 {
@@ -109,17 +124,6 @@ body {
     .hero-content p {
         font-size: 1.2rem;
     }
-    .wave-divider {
-        position: relative;
-        line-height: 0;
-}
-
-    .wave-divider svg {
-        display: block;
-        width: 100%;
-        height: auto;
-}
-
 }
 
 /* Seção Sobre */
@@ -219,16 +223,17 @@ body {
 .catalogo-texto .categoria {
     text-transform: uppercase;
     color: #8df57c;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1.2px;
 }
 
 .catalogo-texto h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin-bottom: 40px;
-    font-weight: 700;
+    font-weight: 800;
+    line-height: 1.3;
 }
 
 /* Grid de caixas */
@@ -238,59 +243,65 @@ body {
     gap: 30px;
     max-width: 1100px;
     margin: 0 auto;
+    padding: 20px;
 }
 
+/* Card da caixa */
 .caixa {
     background: #fff;
     color: #111;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .caixa:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
-/* Ícones PNG */
-.icone-caixa {
-    margin-bottom: 15px;
-}
-
-.icone-caixa img {
-    width: 60px;
+/* Ícones ou imagens */
+.caixa img, 
+.icone-caixa svg {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
     transition: transform 0.3s ease;
 }
 
-.caixa:hover .icone-caixa img {
+.caixa:hover img, 
+.caixa:hover .icone-caixa svg {
     transform: scale(1.1);
 }
 
 /* Textos das caixas */
 .caixa h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #222;
 }
 
 .caixa p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #555;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 /* Botão pequeno */
 .btn-outline.small {
-    padding: 8px 20px;
-    font-size: 0.85rem;
+    padding: 10px 24px;
+    font-size: 0.9rem;
     border: 2px solid #111;
     border-radius: 50px;
     text-decoration: none;
     color: #111;
-    font-weight: 500;
-    transition: 0.3s ease;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .btn-outline.small:hover {
@@ -298,10 +309,13 @@ body {
     color: #fff;
 }
 
-/* Responsividade Catálogo */
+/* Responsividade */
 @media(min-width: 768px){
     .caixas {
         grid-template-columns: repeat(3, 1fr);
     }
-}
 
+    .catalogo-texto h2 {
+        font-size: 3rem;
+    }
+}
