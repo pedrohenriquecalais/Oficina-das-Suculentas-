@@ -1,0 +1,296 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9f5ec;
+}
+
+/* Header */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 30px;
+}
+
+.menu-icon {
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: url('imagens/adriana-2.png') no-repeat center top;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+    max-width: 400px;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.hero-content h1 span {
+    color: #8df57c;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.btn {
+    background: #4CAF50;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #45a049;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsividade Hero */
+@media (min-width: 768px) {
+    .hero {
+        background-position: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Seção Sobre */
+.sobre {
+    background-color: #e9f5ec;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-sobre {
+    max-width: 1100px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imagem-sobre {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.categoria {
+    color: #4CAF50;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.texto-sobre h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #111;
+    line-height: 1.3;
+}
+
+.texto-sobre .descricao {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn-outline {
+    padding: 12px 30px;
+    border: 2px solid #111;
+    text-decoration: none;
+    color: #111;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #111;
+    color: #fff;
+}
+
+/* Layout desktop - Sobre */
+@media(min-width: 768px){
+    .container-sobre {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .imagem-sobre {
+        margin-right: 40px;
+        margin-bottom: 0;
+    }
+
+    .texto-sobre {
+        max-width: 500px;
+    }
+}
+
+/* Seção Catálogo */
+.catalogo {
+    background: #0e1d12;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.catalogo-texto .categoria {
+    text-transform: uppercase;
+    color: #8df57c;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.catalogo-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Grid de caixas */
+.caixas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.caixa {
+    background: #fff;
+    color: #111;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.caixa:hover {
+    transform: translateY(-5px);
+}
+
+/* Ícones PNG */
+.icone-caixa {
+    margin-bottom: 15px;
+}
+
+.icone-caixa img {
+    width: 60px;
+    transition: transform 0.3s ease;
+}
+
+.caixa:hover .icone-caixa img {
+    transform: scale(1.1);
+}
+
+/* Textos das caixas */
+.caixa h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.caixa p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Botão pequeno */
+.btn-outline.small {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    border: 2px solid #111;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn-outline.small:hover {
+    background: #111;
+    color: #fff;
+}
+
+/* Responsividade Catálogo */
+@media(min-width: 768px){
+    .caixas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
