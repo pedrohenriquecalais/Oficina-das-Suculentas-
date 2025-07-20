@@ -6,6 +6,12 @@
     <title>Suculentas Imperdíveis</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f6fdf8;
+            margin: 0;
+            padding: 0;
+        }
         .btn, .btn-outline.small {
             background: #FF6600;
             color: #fff;
@@ -16,6 +22,7 @@
             border: none;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             transition: background 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
         }
         .btn:hover, .btn-outline.small:hover {
             background: #e65c00;
@@ -30,12 +37,69 @@
             background: #FF6600;
             color: #fff;
         }
+        .suculentas-promocao, .catalogo, .sobre {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .suculentas-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        .suculentas-texto {
+            max-width: 550px;
+            text-align: center;
+        }
         .suculentas-imagem img {
             width: 100%;
             max-width: 500px;
             height: auto;
-            border-radius: 0 40px 0 40px;
+            border-radius: 20px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+        .catalogo-texto, .sobre .texto-sobre {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .caixas {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .caixa {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .caixa img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .caixa h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .caixa .preco {
+            color: #FF6600;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        @media(min-width: 768px){
+            .suculentas-container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .suculentas-texto {
+                text-align: left;
+            }
+            .caixas {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
 </head>
@@ -79,7 +143,6 @@
             <p class="validade">
                 📅 Promoção válida de <strong>22 a 25 de julho</strong>.
             </p>
-            <a href="#" class="btn">Quero Participar!</a>
         </div>
         <div class="suculentas-imagem">
             <img src="imagens/colecao.jpg" alt="Suculentas de coleção">
@@ -94,7 +157,6 @@
     </div>
 
     <div class="caixas">
-
         <div class="caixa">
             <img src="imagens/icon-babalu.png" alt="Caixa Babalu" class="icone-caixa-img">
             <h3>Caixa Encanto da Babalu</h3>
@@ -103,7 +165,6 @@
                 🪴 <strong>Compre R$ 150 e receba até R$ 300</strong> em suculentas de coleção.<br>
                 + 1 Adria Babalu de presente!
             </p>
-            <a href="#" class="btn-outline small">Quero essa!</a>
         </div>
 
         <div class="caixa">
@@ -114,7 +175,6 @@
                 🌿 <strong>Compre R$ 180 e receba até R$ 360</strong> em suculentas raras.<br>
                 + 1 Victor Kane Variegata exclusiva!
             </p>
-            <a href="#" class="btn-outline small">Quero essa!</a>
         </div>
 
         <div class="caixa">
@@ -125,9 +185,7 @@
                 🌵 <strong>Compre R$ 200 e receba até R$ 400</strong> em suculentas premium.<br>
                 + 1 majestosa Barba de Velho!
             </p>
-            <a href="#" class="btn-outline small">Quero essa!</a>
         </div>
-
     </div>
 </section>
 
