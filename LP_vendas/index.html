@@ -5,6 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suculentas Imperdíveis</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .btn, .btn-outline.small {
+            background: #FF6600;
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn:hover, .btn-outline.small:hover {
+            background: #e65c00;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .btn-outline.small {
+            background: transparent;
+            color: #FF6600;
+            border: 2px solid #FF6600;
+        }
+        .btn-outline.small:hover {
+            background: #FF6600;
+            color: #fff;
+        }
+        .suculentas-imagem img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 0 40px 0 40px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+    </style>
 </head>
 <body>
 
@@ -20,7 +53,7 @@
         <div class="hero-content">
             <h1>Suculentas <span>imperdíveis</span></h1>
             <p>Aproveite ofertas exclusivas agora!</p>
-            <a href="#" class="btn">View Products</a>
+            <a href="#catalogo" class="btn">View Products</a>
         </div>
     </section>
 
@@ -54,7 +87,7 @@
     </div>
 </section>
 
-<section class="catalogo">
+<section class="catalogo" id="catalogo">
     <div class="catalogo-texto">
         <p class="categoria">Caixas Secretas</p>
         <h2>Escolha sua caixa e surpreenda-se!</h2>
